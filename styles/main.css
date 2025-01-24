@@ -1,0 +1,395 @@
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 1.3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  z-index: 100;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.navbar {
+  background-color: transparent;
+  padding-right: 250px;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  padding-right: 40px;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+.navbar a.active {
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  nav {
+    display: none;
+  }
+}
+
+.hero-bg {
+  background-image: url("../img/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 700;
+  padding-top: 7%;
+}
+
+.title h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar input::placeholder {
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 17px;
+  padding: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  padding: 14px 35px 14px 35px;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(38, 89, 195, 1);
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.search {
+  background-image: url("../img/akar-icons_search.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  width: 25%;
+}
+
+.search input {
+  padding-left: 40px;
+  border-radius: 35px;
+  width: 100%;
+}
+
+.check-cal {
+  background-image: url("../img/akar-icons_calendar.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.check-cal input {
+  padding-left: 40px;
+  border-radius: 35px;
+  width: 100%;
+}
+
+.checks {
+  display: flex;
+}
+
+.persons-icon {
+  flex: 1;
+  background-image: url("../img/fontisto_male.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.persons-icon input {
+  padding-left: 40px;
+  border-radius: 35px;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    padding-top: 20%;
+    font-size: 32px;
+  }
+  .hero-bg {
+    height: 50vh;
+  }
+
+  .subtitle {
+    color: black;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+
+  .search-bar .search {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 35px;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .search input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 35px;
+  }
+
+  .check-cal input {
+    width: 100%;
+  }
+
+  .search-bar .checks {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 35px;
+    padding: 15px;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .search-bar .persons-icon {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 35px;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  .persons-icon input {
+    width: 100%;
+    padding: 15px;
+    padding-left: 35px;
+    border-radius: 35px;
+  }
+
+  .search-bar button {
+    width: 100%;
+    margin-right: 0;
+    background-color: rgba(38, 89, 195, 1);
+    color: white;
+  }
+}
+
+.subtitle h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.categories a {
+  color: grey;
+  text-decoration: none;
+}
+
+.categories a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category img {
+  display: block;
+}
+
+.destinations {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.destination {
+  position: relative;
+  padding-right: 40px;
+}
+
+.destination img {
+  border-radius: 9px;
+}
+
+.destination-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+}
+
+.destination-info h2 {
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .categories {
+    overflow: scroll;
+  }
+  .category img {
+    filter: drop-shadow(0 0 black);
+  }
+  .category a:hover {
+    color: black;
+  }
+  .destination {
+    padding-right: 20px;
+  }
+  .subtitle h1 {
+    font-size: 24px;
+  }
+}
+
+.about {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    margin-top: 100%;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 17px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 760px;
+  margin: 16px;
+}
+
+.card-image {
+  border-radius: 23px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-subtitle {
+  font-size: 17px;
+  opacity: 0.5;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-title {
+  font-size: 27px;
+  font-weight: 500;
+  color: #333;
+  margin: 15px 0;
+}
+
+.card-description {
+  font-size: 17px;
+  opacity: 0.5;
+  margin: 15px 0;
+}
+
+.card-button {
+  margin-top: 15px;
+  padding: 17.71px 35.42px 17.71px 35.42px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: rgba(38, 89, 195, 1);
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  opacity: 0.5;
+}
