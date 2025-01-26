@@ -302,10 +302,11 @@ body {
 @media (max-width: 1200px) {
   .categories {
     overflow: scroll;
-  }
-  .category img {
     filter: drop-shadow(0 0 black);
   }
+  /* .category img {
+    filter: drop-shadow(0 0 black);
+  } */
   .category a:hover {
     color: black;
   }
