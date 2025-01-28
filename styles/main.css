@@ -314,6 +314,9 @@ body {
   .destination {
     padding-right: 20px;
   }
+  .destination img {
+    width: 230px;
+  }
   .subtitle h1 {
     font-size: 24px;
   }
@@ -467,4 +470,10 @@ body {
   font-size: 1em;
   color: #555;
   line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+  .card-com {
+    width: 230px;
+  }
 }
