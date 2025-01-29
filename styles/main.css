@@ -6,6 +6,8 @@ body {
   margin: 0;
 }
 
+/* NAVBAR  */
+
 .header {
   position: fixed;
   width: 100%;
@@ -66,6 +68,8 @@ body {
     display: none;
   }
 }
+
+/* HERO */
 
 .hero-bg {
   background-image: url("../img/hero-bg.png");
@@ -314,7 +318,6 @@ body {
     overflow: scroll;
     filter: drop-shadow(0 0 black);
   }
-
   .category a:hover {
     color: black;
   }
@@ -328,6 +331,10 @@ body {
     font-size: 24px;
   }
 }
+
+/* PAGE */
+
+/* PAGE CARD 1 */
 
 .about {
   margin-left: 10%;
@@ -405,6 +412,8 @@ body {
   color: black;
 }
 
+/* PAGE IMAGE */
+
 .image {
   margin-top: 10%;
   position: relative;
@@ -438,6 +447,8 @@ body {
   color: black;
   margin-left: 10%;
 }
+
+/* PAGE CARD 2 */
 
 .cards-com {
   display: flex;
@@ -485,6 +496,8 @@ body {
     width: 230px;
   }
 }
+
+/* APP */
 
 .app-bg {
   background-image: url("../img/app-bg.png");
@@ -575,6 +588,8 @@ body {
     height: 100vh;
   }
 }
+
+/* FOOTER */
 
 footer h1 {
   margin: 0;
