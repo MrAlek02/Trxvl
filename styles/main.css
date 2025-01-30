@@ -261,6 +261,8 @@ body {
   gap: 20px;
   margin-bottom: 5%;
   text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .categories a {
@@ -317,6 +319,7 @@ body {
   .categories {
     overflow: scroll;
     filter: drop-shadow(0 0 black);
+    margin-right: 0;
   }
   .category a:hover {
     color: black;
@@ -566,26 +569,49 @@ body {
 .app-inputs {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   gap: 100px;
 }
 
-/* .app-input img {
-  width: 100%;
-  height: auto;
-  display: block;
-  padding-bottom: 10px;
-} */
-
 @media (max-width: 1200px) {
   .app-container {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
   }
+
+  .app-inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .app-bg {
-    height: 100vh;
+    height: auto;
+    padding: 50px 0;
+  }
+
+  .app-content h1 {
+    font-size: 36px;
+  }
+
+  .app-content h2 {
+    font-size: 18px;
+  }
+
+  .app-src-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-src-input input {
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-src-input button {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -662,4 +688,13 @@ footer {
 
 .footer-copyright p {
   margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .footer-btn {
+    padding-bottom: 30px;
+  }
+  .footer-social {
+    padding-bottom: 10px;
+  }
 }
