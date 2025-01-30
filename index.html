@@ -33,6 +33,14 @@
                 placeholder="Search destinations, hotels"
               />
             </div>
+            <!-- <div class="checks">
+              <div class="check-cal">
+                <input class="checkIn" type="date" placeholder="Check in" />
+              </div>
+              <div class="check-cal">
+                <input class="checkOut" type="date" placeholder="Check out" />
+              </div>
+            </div> -->
             <div class="checks">
               <div class="check-cal">
                 <input class="checkIn" type="text" placeholder="Check in" />
@@ -42,11 +50,12 @@
               </div>
             </div>
             <div class="persons-icon">
-              <input
-                class="persons"
-                type="text"
-                placeholder="1 room, 2 adults"
-              />
+              <select name="persons" class="persons">
+                <option value="1room">1 room, 2 adults</option>
+                <option value="1room2">1 room, 1 adult</option>
+                <option value="2room2">2 rooms, 2 adults</option>
+                <option value="2room3">2 room, 3 adults</option>
+              </select>
             </div>
             <button type="submit">Search</button>
           </div>
@@ -443,5 +452,11 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu">
+      <a class="active" href="#"><img src="img/home.png" alt="Home" />Home</a>
+      <a href="#"><img src="img/packages.png" alt="Packages" />Packages</a>
+      <a href="#"><img src="img/stays.png" alt="Stays" />Stays</a>
+      <a href="#"><img src="img/flights.png" alt="Flights" />Flights</a>
+    </div>
   </body>
 </html>
