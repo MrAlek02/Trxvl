@@ -515,6 +515,10 @@ body {
 
 /* APP */
 
+.app {
+  margin-top: 10%;
+}
+
 .app-bg {
   background-image: url("../img/app-bg.png");
   background-size: cover;
@@ -589,8 +593,8 @@ body {
 
 @media (max-width: 1200px) {
   .app-container {
-    /* flex-direction: column-reverse; */
-    flex-direction: column;
+    flex-direction: column-reverse;
+    /* flex-direction: column; */
     align-items: center;
     text-align: center;
     position: relative;
@@ -603,7 +607,6 @@ body {
 
   .app-bg {
     height: auto;
-    padding: 50px 0;
   }
 
   .app-content h1 {
@@ -731,7 +734,7 @@ footer {
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     padding: 16px 8px 24px 8px;
   }
   .mobile-menu img {
