@@ -7,8 +7,18 @@
     <title>Trxvl</title>
 
     <!-- CSS -->
-
     <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -24,31 +34,38 @@
     <section class="hero">
       <div class="hero-bg">
         <div class="container">
-          <div class="title">
+          <div class="title | js-hero">
             <h1>The whole world <br />awaits.</h1>
           </div>
-          <div class="search-bar">
+          <div class="search-bar | js-hero">
             <div class="search">
               <input
                 class="search-input"
+                id="input-field"
                 type="search"
-                placeholder="Search destinations, hotels"
+                placeholder=""
+                required
               />
+              <label for="input-field">Search destinations, hotels</label>
             </div>
-            <!-- <div class="checks">
-              <div class="check-cal">
-                <input class="checkIn" type="date" placeholder="Check in" />
-              </div>
-              <div class="check-cal">
-                <input class="checkOut" type="date" placeholder="Check out" />
-              </div>
-            </div> -->
             <div class="checks">
               <div class="check-cal">
-                <input class="checkIn" type="text" placeholder="Check in" />
+                <input type="date" id="hiddenDate" />
+                <input
+                  class="checkIn"
+                  id="dateInput"
+                  type="text"
+                  placeholder="Check in"
+                />
               </div>
               <div class="check-cal">
-                <input class="checkOut" type="text" placeholder="Check out" />
+                <input type="date" id="hiddenDateSecond" />
+                <input
+                  class="checkOut"
+                  id="dateInputSecond"
+                  type="text"
+                  placeholder="Check out"
+                />
               </div>
             </div>
             <div class="persons-icon">
@@ -66,188 +83,460 @@
     </section>
     <div class="categories-margin">
       <div class="container">
-        <div class="hero-subtitle">
+        <div class="hero-subtitle | js-categories">
           <h1>Top categories</h1>
         </div>
       </div>
       <div class="categories">
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 4.png" /> Beaches</a>
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 16.png" /> Deserts</a>
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 3.png" />Mountains</a>
-        </div>
-        <div class="category">
-          <a href="#"
-            ><img src="img/Category icons/image 13.png" />IconicCities</a
-          >
-        </div>
-        <div class="category">
-          <a href="#"
-            ><img src="img/Category icons/image 17.png" />Houseboats</a
-          >
-        </div>
-        <div class="category">
-          <a href="#"
-            ><img src="img/Category icons/image 10.png" />Countryside</a
-          >
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 5.png" />Camping</a>
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 12.png" />Castles</a>
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 15.png" />Skiing</a>
-        </div>
-        <div class="category">
-          <a href="#"><img src="img/Category icons/image 8.png" />Tropical</a>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="hero-subtitle">
-        <h1>Top Vacation Destinations</h1>
-      </div>
-    </div>
-    <div class="destinations">
-      <div class="destination">
-        <a href="#"
-          ><img src="img/Destinations/Bali.png" />
-          <div class="destination-info">
-            <h2>Bali, Indonesia</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 4.png" /> Beaches</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 16.png" /> Deserts</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 3.png" />Mountains</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 13.png" />Iconic Cities</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 17.png" />Houseboats</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 10.png" />Countryside</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 5.png" />Camping</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 12.png" />Castles</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 15.png" />Skiing</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 8.png" />Tropical</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 4.png" /> Beaches</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 16.png" /> Deserts</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 3.png" />Mountains</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 13.png" />Iconic Cities</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 17.png" />Houseboats</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 10.png" />Countryside</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 5.png" />Camping</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 12.png" />Castles</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 15.png" />Skiing</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 8.png" />Tropical</a
+                >
+              </div>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
-      <div class="destination">
-        <a href="#"
-          ><img src="img/Destinations/Kerry.png" />
-          <div class="destination-info">
-            <h2>Kerry, Ireland</h2>
-          </div>
-        </a>
+      <div class="container">
+        <div class="hero-subtitle | js-destinations">
+          <h1>Top Vacation Destinations</h1>
+        </div>
       </div>
-      <div class="destination">
-        <a href="#"
-          ><img src="img/Destinations/Sydney.png" />
-          <div class="destination-info">
-            <h2>Sydney, Australia</h2>
+      <div class="destinations">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Bali.png" />
+                  <div class="destination-info">
+                    <h2>Bali, Indonesia</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Kerry.png" />
+                  <div class="destination-info">
+                    <h2>Kerry, Ireland</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Sydney.png" />
+                  <div class="destination-info">
+                    <h2>Sydney, Australia</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Paris.png" />
+                  <div class="destination-info">
+                    <h2>Paris, France</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Swiss.png" />
+                  <div class="destination-info">
+                    <h2>Alps, Switzerland</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination | js-destinations">
+                <a href="#"
+                  ><img src="img/Destinations/Bali.png" />
+                  <div class="destination-info">
+                    <h2>Bali, Indonesia</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Destinations/Kerry.png" />
+                  <div class="destination-info">
+                    <h2>Kerry, Ireland</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Destinations/Sydney.png" />
+                  <div class="destination-info">
+                    <h2>Sydney, Australia</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Destinations/Paris.png" />
+                  <div class="destination-info">
+                    <h2>Paris, France</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Destinations/Swiss.png" />
+                  <div class="destination-info">
+                    <h2>Alps, Switzerland</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
-        </a>
-      </div>
-      <div class="destination">
-        <a href="#"
-          ><img src="img/Destinations/Paris.png" />
-          <div class="destination-info">
-            <h2>Paris, France</h2>
-          </div>
-        </a>
-      </div>
-      <div class="destination">
-        <a href="#"
-          ><img src="img/Destinations/Swiss.png" />
-          <div class="destination-info">
-            <h2>Alps, Switzerland</h2>
-          </div>
-        </a>
+        </div>
       </div>
     </div>
     <div class="about">
-      <div class="subtitle">
+      <div class="subtitle | js-about">
         <h1>Offers</h1>
       </div>
-      <div class="cards">
-        <div class="card">
-          <img src="img/image 19.png" alt="Card Image" class="card-image" />
-          <div class="card-content">
-            <h4 class="card-subtitle">Domestic Flights</h4>
-            <h2 class="card-title">Huge savings on flight with trxvl.</h2>
-            <p class="card-description">Book domestic flights starting</p>
-            <button class="card-button">Book Now</button>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card | js-about">
+              <img src="img/image 19.png" alt="Card Image" class="card-image" />
+              <div class="card-content">
+                <h4 class="card-subtitle">Domestic Flights</h4>
+                <h2 class="card-title">Huge savings on flight with trxvl.</h2>
+                <p class="card-description">Book domestic flights starting</p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <img src="img/Frame 31.png" alt="Card Image" class="card-image" />
-          <div class="card-content">
-            <h4 class="card-subtitle">International Hotels</h4>
-            <h2 class="card-title">
-              Enjoy up to 20% off on International Hotels.
-            </h2>
-            <p class="card-description">
-              Make the most of this deal on your first booking with trxvl.
-            </p>
-            <button class="card-button">Book Now</button>
+          <div class="swiper-slide">
+            <div class="card | js-about">
+              <img src="img/Frame 31.png" alt="Card Image" class="card-image" />
+              <div class="card-content">
+                <h4 class="card-subtitle">International Hotels</h4>
+                <h2 class="card-title">
+                  Enjoy up to 20% off on International Hotels.
+                </h2>
+                <p class="card-description">
+                  Make the most of this deal on your first booking with trxvl.
+                </p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <img src="img/image 19-2.png" alt="Card Image" class="card-image" />
-          <div class="card-content">
-            <h4 class="card-subtitle">Bank Offer</h4>
-            <h2 class="card-title">Get upto 30% instant discount</h2>
-            <p class="card-description">
-              Get discount on flights, hotels and holiday packages with HDFC
-              bank credit card.
-            </p>
-            <button class="card-button">Book Now</button>
+          <div class="swiper-slide">
+            <div class="card | js-about">
+              <img
+                src="img/image 19-2.png"
+                alt="Card Image"
+                class="card-image"
+              />
+              <div class="card-content">
+                <h4 class="card-subtitle">Bank Offer</h4>
+                <h2 class="card-title">Get upto 30% instant discount</h2>
+                <p class="card-description">
+                  Get discount on flights, hotels and holiday packages with HDFC
+                  bank credit card.
+                </p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="img/image 19.png" alt="Card Image" class="card-image" />
+              <div class="card-content">
+                <h4 class="card-subtitle">Domestic Flights</h4>
+                <h2 class="card-title">Huge savings on flight with trxvl.</h2>
+                <p class="card-description">Book domestic flights starting</p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="img/Frame 31.png" alt="Card Image" class="card-image" />
+              <div class="card-content">
+                <h4 class="card-subtitle">International Hotels</h4>
+                <h2 class="card-title">
+                  Enjoy up to 20% off on International Hotels.
+                </h2>
+                <p class="card-description">
+                  Make the most of this deal on your first booking with trxvl.
+                </p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="card">
+              <img
+                src="img/image 19-2.png"
+                alt="Card Image"
+                class="card-image"
+              />
+              <div class="card-content">
+                <h4 class="card-subtitle">Bank Offer</h4>
+                <h2 class="card-title">Get upto 30% instant discount</h2>
+                <p class="card-description">
+                  Get discount on flights, hotels and holiday packages with HDFC
+                  bank credit card.
+                </p>
+                <button class="card-button">Book Now</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="property">
       <div class="container">
-        <div class="subtitle">
+        <div class="subtitle | js-property">
           <h1>Browse by property type</h1>
         </div>
       </div>
       <div class="destinations">
-        <div class="destination">
-          <a href="#"
-            ><img src="img/Properties/hotels.png" />
-            <div class="destination-info">
-              <h2>Hotels</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="destination | js-property">
+                <a href="#"
+                  ><img src="img/Properties/hotels.png" />
+                  <div class="destination-info">
+                    <h2>Hotels</h2>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="destination">
-          <a href="#"
-            ><img src="img/Properties/apartments.png" />
-            <div class="destination-info">
-              <h2>Apartments</h2>
+            <div class="swiper-slide">
+              <div class="destination | js-property">
+                <a href="#"
+                  ><img src="img/Properties/apartments.png" />
+                  <div class="destination-info">
+                    <h2>Apartments</h2>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="destination">
-          <a href="#"
-            ><img src="img/Properties/resorts.png" />
-            <div class="destination-info">
-              <h2>Resorts</h2>
+            <div class="swiper-slide">
+              <div class="destination | js-property">
+                <a href="#"
+                  ><img src="img/Properties/resorts.png" />
+                  <div class="destination-info">
+                    <h2>Resorts</h2>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="destination">
-          <a href="#"
-            ><img src="img/Properties/villas.png" />
-            <div class="destination-info">
-              <h2>Villas</h2>
+            <div class="swiper-slide">
+              <div class="destination | js-property">
+                <a href="#"
+                  ><img src="img/Properties/villas.png" />
+                  <div class="destination-info">
+                    <h2>Villas</h2>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
-        </div>
-        <div class="destination">
-          <a href="#"
-            ><img src="img/Destinations/Swiss.png" />
-            <div class="destination-info">
-              <h2>Alps, Switzerland</h2>
+            <div class="swiper-slide">
+              <div class="destination | js-property">
+                <a href="#"
+                  ><img src="img/Properties/hotels.png" />
+                  <div class="destination-info">
+                    <h2>Hotels</h2>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Properties/apartments.png" />
+                  <div class="destination-info">
+                    <h2>Apartments</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Properties/resorts.png" />
+                  <div class="destination-info">
+                    <h2>Resorts</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination">
+                <a href="#"
+                  ><img src="img/Properties/villas.png" />
+                  <div class="destination-info">
+                    <h2>Villas</h2>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="image">
+      <div class="image | js-image">
         <img src="img/image 20.png" />
         <div class="image-info">
           <h1>Plan your trip with travel expert</h1>
@@ -256,79 +545,151 @@
       </div>
     </div>
     <div class="community">
-      <div class="subtitle">
+      <div class="subtitle | js-community">
         <h1>Connect with other travelers in our community</h1>
       </div>
       <div class="cards-com">
-        <div class="card-com">
-          <img
-            src="img/Community/India.png"
-            alt="Card Image"
-            class="card-com-image"
-          />
-          <div class="card-com-content">
-            <h2 class="card-com-title">India</h2>
-            <p class="card-com-description">Travel community</p>
-            <p class="card-com-description">155,073 travelers</p>
-          </div>
-        </div>
-        <div class="card-com">
-          <img
-            src="img/Community/Talk.png"
-            alt="Card Image"
-            class="card-com-image"
-          />
-          <div class="card-com-content">
-            <h2 class="card-com-title">Travel Talk</h2>
-            <p class="card-com-description">Travel community</p>
-            <p class="card-com-description">155,073 travelers</p>
-          </div>
-        </div>
-        <div class="card-com">
-          <img
-            src="img/Community/Beach.png"
-            alt="Card Image"
-            class="card-com-image"
-          />
-          <div class="card-com-content">
-            <h2 class="card-com-title">Beach</h2>
-            <p class="card-com-description">Travel community</p>
-            <p class="card-com-description">155,073 travelers</p>
-          </div>
-        </div>
-        <div class="card-com">
-          <img
-            src="img/Community/Mountains.png"
-            alt="Card Image"
-            class="card-com-image"
-          />
-          <div class="card-com-content">
-            <h2 class="card-com-title">Mountains</h2>
-            <p class="card-com-description">Travel community</p>
-            <p class="card-com-description">155,073 travelers</p>
-          </div>
-        </div>
-        <div class="card-com">
-          <img
-            src="img/image 19-2.png"
-            alt="Card Image"
-            class="card-com-image"
-          />
-          <div class="card-com-content">
-            <h2 class="card-com-title">India</h2>
-            <p class="card-com-description">Travel community</p>
-            <p class="card-com-description">155,073 travelers</p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-com | js-community">
+                <img
+                  src="img/Community/India.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">India</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com | js-community">
+                <img
+                  src="img/Community/Talk.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Travel Talk</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com | js-community">
+                <img
+                  src="img/Community/Beach.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Beach</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com | js-community">
+                <img
+                  src="img/Community/Mountains.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Mountains</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com | js-community">
+                <img
+                  src="img/Community/India.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">India</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com">
+                <img
+                  src="img/Community/Talk.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Travel Talk</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com">
+                <img
+                  src="img/Community/Beach.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Beach</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-com">
+                <img
+                  src="img/Community/Mountains.png"
+                  alt="Card Image"
+                  class="card-com-image"
+                />
+                <div class="card-com-content">
+                  <h2 class="card-com-title">Mountains</h2>
+                  <div class="card-com-description">
+                    <p>Travel community</p>
+                    <p>155,073 travelers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="app">
+    <div class="app | js-app">
       <div class="app-bg">
         <div class="app-container">
-          <div class="app-mockup">
-            <img src="img/App/iPhone 13 Mockup.png" />
+          <div class="app-mockup | js-mobile">
+            <img src="img/App/mockup.png" />
           </div>
-          <div class="app-content">
+          <div class="app-content | js-content">
             <h1>Your all-in-one travel app.</h1>
             <h2>
               Book flights, hotels, trains & rental cars anywhere in the world
@@ -336,19 +697,19 @@
               exclusive deals, and 30% more Trip Coins only on the app!
             </h2>
             <div class="app-inputs">
-              <div class="app-input">
+              <div class="app-input | js-content">
                 <button class="active">Mobile</button>
                 <button>Email</button>
                 <p>
                   Enter your phone number to receive a text with a link to
                   download the app.
                 </p>
-                <div class="app-src-input">
+                <div class="app-src-input | js-content">
                   <input type="text" placeholder="+91 Mobile number" />
                   <button class="app-src-btn">Search</button>
                 </div>
               </div>
-              <div class="app-input">
+              <div class="app-input | js-content">
                 <svg
                   width="2"
                   height="57"
@@ -385,7 +746,7 @@
                   />
                 </svg>
               </div>
-              <div class="app-input">
+              <div class="app-input | js-content">
                 <img src="img/image 23.png" />
                 <img src="img/image 22.png" />
               </div>
@@ -456,5 +817,11 @@
       <a href="#"><img src="img/stays.png" alt="Stays" />Stays</a>
       <a href="#"><img src="img/flights.png" alt="Flights" />Flights</a>
     </div>
+    <!-- SWIPER -->
+    <script src="js/swiper.js"></script>
+    <!-- GSAP ANIMATIONS -->
+    <script src="js/animations.js"></script>
+    <!-- CALENDAR -->
+    <script src="js/calendar.js"></script>
   </body>
 </html>
