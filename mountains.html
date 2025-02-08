@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Trxvl</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/mountains.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- FLATPICKR CALENDAR -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">trxvl.</a>
+      <nav class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="#">Stays</a>
+        <a href="#">Flights</a>
+        <a href="#">Packages</a>
+        <a href="#">Sign Up</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero-mtn">
+        <div class="container">
+          <div class="title | js-hero">
+            <h1>The whole world <br />awaits.</h1>
+          </div>
+          <div class="search-bar | js-hero">
+            <div class="search">
+              <input
+                class="search-input"
+                id="input-field"
+                type="search"
+                placeholder=""
+                required
+              />
+              <label for="input-field">Search destinations, hotels</label>
+            </div>
+            <div class="checks">
+              <div class="check-cal">
+                <input
+                  class="checkIn date-picker"
+                  id="dateInput"
+                  type="text"
+                  placeholder="Check in"
+                />
+              </div>
+              <div class="check-cal">
+                <input
+                  class="checkOut date-picker"
+                  id="dateInputSecond"
+                  type="text"
+                  placeholder="Check out"
+                />
+              </div>
+            </div>
+            <div class="persons-icon">
+              <select name="persons" class="persons">
+                <option value="1room">1 room, 2 adults</option>
+                <option value="1room2">1 room, 1 adult</option>
+                <option value="2room2">2 rooms, 2 adults</option>
+                <option value="2room3">2 room, 3 adults</option>
+              </select>
+            </div>
+            <button type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="categories-margin">
+      <div class="container">
+        <div class="hero-subtitle | js-categories">
+          <h1>Top categories</h1>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 4.png" /> Beaches</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 16.png" /> Deserts</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category category-active | js-categories">
+                <a href="mountains.html"
+                  ><img src="img/Mountains/category-mtn.png" />Mountains</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 13.png" />Iconic Cities</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 17.png" />Houseboats</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 10.png" />Countryside</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 5.png" />Camping</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 12.png" />Castles</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 15.png" />Skiing</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category | js-categories">
+                <a href="#"
+                  ><img src="img/Category icons/image 8.png" />Tropical</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 4.png" /> Beaches</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 16.png" /> Deserts</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category category-active">
+                <a href="mountains.html"
+                  ><img src="img/Mountains/category-mtn.png" />Mountains</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 13.png" />Iconic Cities</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 17.png" />Houseboats</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 10.png" />Countryside</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 5.png" />Camping</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 12.png" />Castles</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 15.png" />Skiing</a
+                >
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category">
+                <a href="#"
+                  ><img src="img/Category icons/image 8.png" />Tropical</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="destinations-mtn">
+        <div class="hero-subtitle | js-destinations">
+          <h1>Popular Mountains Destinations</h1>
+        </div>
+        <div class="destination-mtn">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card-mtn | js-destinations">
+                  <a href="#">
+                    <img src="img/Destinations/Swiss.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Swiss Alps</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.7</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn | js-destinations">
+                  <a href="#">
+                    <img src="img/Mountains/image 34.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Hallstatt</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.9</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn | js-destinations">
+                  <a href="#">
+                    <img src="img/Mountains/image 35.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Faroe Island</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.5</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn | js-destinations">
+                  <a href="#">
+                    <img src="img/Mountains/image 36.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Innsbruck</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.9</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn | js-destinations">
+                  <a href="#">
+                    <img src="img/Destinations/Swiss.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Swiss Alps</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.7</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn">
+                  <a href="#">
+                    <img src="img/Mountains/image 34.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Hallstatt</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.9</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn">
+                  <a href="#">
+                    <img src="img/Mountains/image 35.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Faroe Island</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.5</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-mtn">
+                  <a href="#">
+                    <img src="img/Mountains/image 36.png" alt="Alps" />
+                    <div class="card-mtn-content">
+                      <div class="mtn-title-row">
+                        <h2>Innsbruck</h2>
+                        <img src="img/Mountains/star.png" />
+                        <h2>4.9</h2>
+                      </div>
+                      <h3>3 days 4 Nights</h3>
+                      <div class="mtn-icons">
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/flights.png" />
+                          <p>2 Flights</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/ri_hotel-line.png" />
+                          <p>1 Hotel</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/cil_car-alt.png" />
+                          <p>2 Transfers</p>
+                        </div>
+                        <div class="mtn-icon">
+                          <img src="img/Mountains/iconoir_trekking.png" />
+                          <p>4 Activities</p>
+                        </div>
+                      </div>
+                      <ul>
+                        <li>Tour combo with return airport transfer</li>
+                        <li>City Tour</li>
+                        <li>Curious Corner</li>
+                      </ul>
+                      <div class="mtn-price">
+                        <h3>₹88,952</h3>
+                        <h2>₹88,952</h2>
+                        <p>Per person</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recently">
+      <div class="container">
+        <h1 class="| js-recently">Recetly Viewed</h1>
+      </div>
+      <div class="recently-cards">
+        <div class="card-mtn | js-recently">
+          <a href="#">
+            <img src="img/Mountains/image 34.png" alt="Alps" />
+            <div class="card-mtn-content">
+              <div class="mtn-title-row">
+                <h2>Hallstatt</h2>
+                <img src="img/Mountains/star.png" />
+                <h2>4.9</h2>
+              </div>
+              <h3>3 days 4 Nights</h3>
+              <div class="mtn-icons">
+                <div class="mtn-icon">
+                  <img src="img/Mountains/flights.png" />
+                  <p>2 Flights</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/ri_hotel-line.png" />
+                  <p>1 Hotel</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/cil_car-alt.png" />
+                  <p>2 Transfers</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/iconoir_trekking.png" />
+                  <p>4 Activities</p>
+                </div>
+              </div>
+              <ul>
+                <li>Tour combo with return airport transfer</li>
+                <li>City Tour</li>
+                <li>Curious Corner</li>
+              </ul>
+              <div class="mtn-price">
+                <h3>₹88,952</h3>
+                <h2>₹88,952</h2>
+                <p>Per person</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-mtn | js-recently">
+          <a href="#">
+            <img src="img/Mountains/image 36.png" alt="Alps" />
+            <div class="card-mtn-content">
+              <div class="mtn-title-row">
+                <h2>Innsbruck</h2>
+                <img src="img/Mountains/star.png" />
+                <h2>4.9</h2>
+              </div>
+              <h3>3 days 4 Nights</h3>
+              <div class="mtn-icons">
+                <div class="mtn-icon">
+                  <img src="img/Mountains/flights.png" />
+                  <p>2 Flights</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/ri_hotel-line.png" />
+                  <p>1 Hotel</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/cil_car-alt.png" />
+                  <p>2 Transfers</p>
+                </div>
+                <div class="mtn-icon">
+                  <img src="img/Mountains/iconoir_trekking.png" />
+                  <p>4 Activities</p>
+                </div>
+              </div>
+              <ul>
+                <li>Tour combo with return airport transfer</li>
+                <li>City Tour</li>
+                <li>Curious Corner</li>
+              </ul>
+              <div class="mtn-price">
+                <h3>₹88,952</h3>
+                <h2>₹88,952</h2>
+                <p>Per person</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="card-mtn card-bg | js-recently">
+          <h1>Summer Bonanza!</h1>
+          <p>Enjoy confortable transfers in shared <br />coaches</p>
+          <p>Choose from 5 flights per week</p>
+          <p>Get a free Rapid Antigen Test at <br />selected hotels</p>
+        </div>
+      </div>
+    </div>
+    <div class="packages">
+      <div class="container">
+        <h1 class="| js-packages">All Inclusive Packages!</h1>
+      </div>
+      <div class="package">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-mtn | js-packages">
+                <a href="#">
+                  <img src="img/Mountains/image 24.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Val di Funes</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-packages">
+                <a href="#">
+                  <img src="img/Mountains/image 25.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Ushuaia</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-packages">
+                <a href="#">
+                  <img src="img/Mountains/image 31.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Berchtesgaden</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-packages">
+                <a href="#">
+                  <img src="img/Mountains/image 32.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Fussen</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-packages">
+                <a href="#">
+                  <img src="img/Mountains/image 24.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Val di Funes</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 25.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Ushuaia</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 31.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Berchtesgaden</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 32.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Fussen</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="honeymoonss">
+      <div class="container">
+        <h1 class="| js-honeymoon">Honeymoon Freebies Special</h1>
+      </div>
+      <div class="honeymoon">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-mtn | js-honeymoon">
+                <a href="#">
+                  <img src="img/Mountains/image 27.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Mauritius</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-honeymoon">
+                <a href="#">
+                  <img src="img/Mountains/image 28.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Havelock</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.9</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-honeymoon">
+                <a href="#">
+                  <img src="img/Mountains/image 29.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Whitsunday Islands</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.5</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-honeymoon">
+                <a href="#">
+                  <img src="img/Mountains/image 30.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Maldives</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.9</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn | js-honeymoon">
+                <a href="#">
+                  <img src="img/Mountains/image 27.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Mauritius</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.7</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 28.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Havelock</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.9</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 29.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Whitsunday Islands</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.5</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-mtn">
+                <a href="#">
+                  <img src="img/Mountains/image 30.png" alt="Alps" />
+                  <div class="card-mtn-content">
+                    <div class="mtn-title-row">
+                      <h2>Maldives</h2>
+                      <img src="img/Mountains/star.png" />
+                      <h2>4.9</h2>
+                    </div>
+                    <h3>3 days 4 Nights</h3>
+                    <div class="mtn-icons">
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/flights.png" />
+                        <p>2 Flights</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/ri_hotel-line.png" />
+                        <p>1 Hotel</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/cil_car-alt.png" />
+                        <p>2 Transfers</p>
+                      </div>
+                      <div class="mtn-icon">
+                        <img src="img/Mountains/iconoir_trekking.png" />
+                        <p>4 Activities</p>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>Tour combo with return airport transfer</li>
+                      <li>City Tour</li>
+                      <li>Curious Corner</li>
+                    </ul>
+                    <div class="mtn-price">
+                      <h3>₹88,952</h3>
+                      <h2>₹88,952</h2>
+                      <p>Per person</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="footer-left">
+            <div class="logo">
+              <h1>Trxvl.</h1>
+            </div>
+          </div>
+          <div class="footer-menus">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Seslendirme ve Alt Jazz</a></li>
+                <li><a href="#">Media Market</a></li>
+                <li><a href="#">Gillie</a></li>
+                <li><a href="#">Size Last</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Self Betimes</a></li>
+                <li><a href="#">Yatırımcı İlişkileri</a></li>
+                <li><a href="#">Basal Himmler</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Yard Market</a></li>
+                <li><a href="#">Is İmkanları</a></li>
+                <li><a href="#">Car Tercihleri</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Hedge Karla</a></li>
+                <li><a href="#">Mullein Koşulları</a></li>
+                <li><a href="#">Autumnal Bulgier</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-down">
+          <div class="footer-btn">
+            <button>Helmet KOD</button>
+          </div>
+          <div class="footer-social">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+            <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="img/youtube.png" alt="Youtube" /></a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>© 1997-2021 Netflix, Inc. {i-062d573a0ee099242}</p>
+        </div>
+      </div>
+    </footer>
+    <div class="mobile-menu">
+      <a class="active" href="#"><img src="img/home.png" alt="Home" />Home</a>
+      <a href="#"><img src="img/packages.png" alt="Packages" />Packages</a>
+      <a href="#"><img src="img/stays.png" alt="Stays" />Stays</a>
+      <a href="#"><img src="img/flights.png" alt="Flights" />Flights</a>
+    </div>
+    <!-- SWIPER -->
+    <script src="js/swiper.js"></script>
+    <!-- GSAP ANIMATIONS -->
+    <script src="js/anime-mtn.js"></script>
+    <!-- FLATPICKR -->
+    <script src="js/flatpickr.js"></script>
+  </body>
+</html>

@@ -9,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css" />
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- SWIPER -->
     <link
       rel="stylesheet"
@@ -19,6 +22,13 @@
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- FLATPICKR CALENDAR -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </head>
   <body>
     <header class="header">
@@ -50,18 +60,16 @@
             </div>
             <div class="checks">
               <div class="check-cal">
-                <input type="date" id="hiddenDate" />
                 <input
-                  class="checkIn"
+                  class="checkIn date-picker"
                   id="dateInput"
                   type="text"
                   placeholder="Check in"
                 />
               </div>
               <div class="check-cal">
-                <input type="date" id="hiddenDateSecond" />
                 <input
-                  class="checkOut"
+                  class="checkOut date-picker"
                   id="dateInputSecond"
                   type="text"
                   placeholder="Check out"
@@ -106,7 +114,7 @@
             </div>
             <div class="swiper-slide">
               <div class="category | js-categories">
-                <a href="#"
+                <a href="mountains.html"
                   ><img src="img/Category icons/image 3.png" />Mountains</a
                 >
               </div>
@@ -176,7 +184,7 @@
             </div>
             <div class="swiper-slide">
               <div class="category">
-                <a href="#"
+                <a href="mountains.html"
                   ><img src="img/Category icons/image 3.png" />Mountains</a
                 >
               </div>
@@ -821,7 +829,7 @@
     <script src="js/swiper.js"></script>
     <!-- GSAP ANIMATIONS -->
     <script src="js/animations.js"></script>
-    <!-- CALENDAR -->
-    <script src="js/calendar.js"></script>
+    <!-- FLATPICKR -->
+    <script src="js/flatpickr.js"></script>
   </body>
 </html>
